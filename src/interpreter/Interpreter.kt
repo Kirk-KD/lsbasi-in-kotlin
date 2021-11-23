@@ -1,6 +1,5 @@
 package interpreter
 
-import asInt
 import ast.*
 
 class Interpreter(private val parser: Parser) {
@@ -32,8 +31,8 @@ class Interpreter(private val parser: Parser) {
             }
             is UnaryOp -> {
                 when (node.op.type) {
-                    TokenType.MINUS -> return -asInt(this.visit(node.expr))
-                    TokenType.PLUS -> return +asInt(this.visit(node.expr))
+                    TokenType.MINUS -> return -(this.visit(node.expr) as Int)
+                    TokenType.PLUS -> return +(this.visit(node.expr) as Int)
                     else -> this.error()
                 }
             }
