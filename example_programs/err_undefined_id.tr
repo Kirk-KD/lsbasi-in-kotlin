@@ -1,0 +1,4 @@
+main {
+    var b: Int;
+    var a: Int = 8 + b;
+}

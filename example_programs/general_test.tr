@@ -1,0 +1,13 @@
+#####################################################
+## A TEST PROGRAM
+#####################################################
+
+main {
+    var a: Float = 3.14;
+    var b: Int = 20, var1: Int = 2;
+    var var2: Int = a + b * var1 + 10;
+    var x: Int, y: Int = 10;
+    var x: Int = 10;
+
+    proc testProc1 { var f: Int = 0.1; }
+}
